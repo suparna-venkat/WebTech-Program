@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;0,700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.navbarcontainer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid black;
+}
+
+.logo img {
+    width: 150px;
+    height: 28px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+.navlinks li {
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.navlinks li:last-child {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+
+.main-content {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+    gap: 50px;
+}
+
+
+.text-section {
+    flex: 1.2;
+    max-width: 550px;
+}
+
+.text-section h1 {
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 67px;
+}
+
+.text-section h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.text-section button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.image-section {
+    flex: 1;
+    height: 550px;
+    background: url('./properties/4_SdjkdS98aKH76I8eD0_qjw.png') no-repeat center;
+    background-size: contain;
+    background-position: right center;
+}
+
+.main-content{
+    width: 100%;
+    height: 600px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+footer {
+    width: 100vw;
+    height: 70px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ul {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    gap: 20px;
+}
+li {
+    list-style: none;
+    align-items: start;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    gap: 20px;
+}

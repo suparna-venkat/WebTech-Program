@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <style>
+        h1{
+            font-family: "Sigmar", sans-serif
+        }
+        p{
+            font-family: "Montserrat", sans-serif
+        }
+        h2{
+            font-family: "Montserrat", sans-serif
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div id="nav_bar">
+            <a href="https://play.google.com/store/search?q=zomato&c=apps&hl=en_US">
+                <img src="./properties/zomato_logo-freelogovectors.net_-640x474.png" alt="Zomato logo" id="zomato_logo">
+            </a>
+            <div id="nav_links">
+                <a href="#">Investor Relations</a>
+                <a href="#">Add Resto</a>
+                <a href="#">Login</a>
+                <a href="#">Signup</a>
+            </div>
+        </div>
+    </nav>
+    <header id="banner">
+        <h1>Zomato</h1>
+        <p>Discover the best food & drinks</p>
+    </header>
+    <section id="search_section">
+        <div class="search-container">
+            <div class="input-box">
+                <img src="./properties/location-icon-png-14.png" alt="location" class="input-icon">
+                <input id="location" name="location" list="cities" placeholder="Enter your location">
+            </div>
+            <datalist id="cities">
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Assam">Assam</option>
+            </datalist><div class="input-box">
+                <img src="./properties/icons8-search-128.png" alt="search" class="input-icon">
+                <input id="restaurant" list="restaurants" placeholder="Search for restaurants, cuisine or a dish" name="restaurant">
+            </div>
+            <datalist id="restaurants">
+                <option value="Domino’s">Domino’s</option>
+                <option value="Cafe Coffee Day">Cafe Coffee Day</option>
+                <option value="KFC">KFC</option>
+                <option value="Barbeque Nation">Barbeque Nation</option>
+                <option value="Dunkin’ Donuts">Dunkin’ Donuts</option>
+                <option value="Subway">Subway</option>
+                <option value="Taco Bell">Taco Bell</option>
+                <option value="Moti Mahal Deluxe">Moti Mahal Deluxe</option>
+                <option value="Barista">Barista</option>
+            </datalist>
+        </div>
+    </section>
+    
+    
+    <section id="features">
+        <div class="feature-box">
+            <img src="./properties/Free Photo _ Top view over hotpot dishes.jpg" alt="Order Online">
+            <h2> Order Online </h2>
+            <p> Stay home and order to your doorstep </p>
+        </div>
+        
+        <div class="feature-box">
+            <img src="./properties/dining.jpg" alt="Dining Out">
+            <h2> Dining Out </h2>
+            <p> View the city's favorite dining venues </p>
+        </div>
+    
+        <div class="feature-box">
+            <img src="./properties/82bcc8bd6f3aa0583b2466cc3e07bdf0.jpg" alt="Live Events">
+            <h2> Live Events </h2>
+            <p> Discover India's best Live Events and Concerts </p>
+        </div>
+    </section>
+    
+
+</body>
+
+</html>

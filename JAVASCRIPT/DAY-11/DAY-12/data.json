@@ -1,0 +1,31 @@
+[
+    {
+       "name":"john",
+       "age":20,
+       "skills":["html","css","javascript"],
+       "city":"london"
+
+       },
+       {
+        "name":"soup",
+        "age":18,
+        "skills":["html","css","javascript","ml"],
+        "city":"vellore"
+ 
+        },
+        {
+            "name":"preethi",
+            "age":19,
+            "skills":["html","css","javascript"],
+            "city":"tamizh"
+     
+            },
+        {
+                "name":"shivani",
+                "age":2,
+                "skills":["ht","cs","java"],
+                "city":"thiruvallur"
+         
+                }
+        
+]

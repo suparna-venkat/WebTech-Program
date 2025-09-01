@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jio Saavn Clone</title>
+  <link rel="stylesheet" href="./output.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="bg-white">
+
+<!-- Header -->
+<header class="h-[70px] shadow flex fixed top-0 w-full bg-[#ebebeb] z-50 shadow-teal-500 px-6">
+  <div class="flex items-center">
+    <img src="../assets/jiosaavn-logo.png" alt="Logo" class="w-[120px] h-[33px]"/>
+  </div>
+  <ul class="flex gap-7 items-center ml-8 text-gray-600 font-bold"> 
+    <li class="cursor-pointer hover:underline">Music</li> 
+    <li class="cursor-pointer hover:underline">Podcasts</li>
+    <li class="cursor-pointer hover:underline">Pro</li>
+  </ul>
+
+  <div class="w-[500px] h-[40px] bg-white rounded-full flex items-center px-4 ml-40 mt-3.5">
+    <i class="fa-solid fa-magnifying-glass text-gray-700 text-sm"></i>
+    <input type="text" placeholder="Search" class="outline-none ml-2 w-full text-sm"/>
+  </div>
+
+  <div class="flex items-center gap-4 ml-auto">
+    <select class="text-gray-600 font-bold border-gray-300 rounded px-2">
+      <option selected disabled>Music Languages</option>
+      <option value="Hindi">Hindi</option>
+      <option value="English">English</option>
+      <option value="Tamil">Tamil</option>
+      <option value="Punjabi">Punjabi</option>
+      <option value="Bhojpuri">Bhojpuri</option>
+    </select>
+    <a href="#" class="text-gray-600 font-bold hover:underline">LogIn</a>
+    <a href="#" class="text-gray-600 font-bold hover:underline">SignUp</a>
+  </div>
+</header>
+
+
+<div class="flex pt-[70px]">
+
+  <!-- Sidebar -->
+<div class="w-[250px] bg-gray-100 fixed top-[70px] left-0 bottom-[60px] overflow-y-auto scrollbar-thin scrollbar-thumb-teal-600 scrollbar-track-gray-400">
+  <aside class="font-bold text-xl m-10 text-gray-400">BROWSE</aside>
+  <ul class="font-bold cursor-pointer m-10 space-y-3 text-gray-700">
+    <li class="hover:underline">New releases</li>
+    <li class="hover:underline">Top charts</li> 
+    <li class="hover:underline">Top playlist</li>
+    <li class="hover:underline">Podcasts</li>
+    <li class="hover:underline">Top Artists</li>
+    <li class="hover:underline">Radio</li>
+  </ul>
+
+  <aside class="font-bold text-xl m-10 text-gray-400">LIBRARY</aside>
+  <ul class="font-bold text-gray-700 m-10 space-y-3">
+    <li class="hover:text-teal-500 cursor-pointer"><i class="fa-solid fa-clock-rotate-left"></i> History</li>
+    <li class="hover:text-teal-500 cursor-pointer"><i class="fa-solid fa-music"></i> Liked Songs</li>
+    <li class="hover:text-teal-500 cursor-pointer"><i class="fa-solid fa-compact-disc"></i> Albums</li>
+    <li class="hover:text-teal-500 cursor-pointer"><i class="fa-solid fa-podcast"></i> Podcasts</li>
+    <li class="hover:text-teal-500 cursor-pointer"><i class="fa-solid fa-music"></i> Artists</li>
+  </ul>
+
+  <aside class="h-[35px] w-[140px] font-bold text-[18px] m-10  text-teal-500 pr-1 pl-1 border-2 border-teal-500 rounded-2xl text-center cursor-pointer hover:bg-teal-200">
+  +New Playlist
+  </aside> 
+</div>
+
+
+
+ <!-- Main Content -->
+   <!-- no 1 -->
+   <main class="flex-1 p-6 ml-[250px] bg-white overflow-y-auto pr-[20px]">
+    <h1 class="text-2xl font-bold text-gray-700 mb-4">Trending Now</h1>
+    <section class="flex flex-wrap gap-6">
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/rockstar.jpg" alt="Rockstar" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Kun Faya Kun</h3>
+        <h5 class="text-center">A.R. Rahman</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i id="playPauseBtn" class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+       <!-- no 2 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/humpty.jpg" alt="Samjhawan" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Samjhawan</h3>
+        <h5 class="text-center">Jawad Ahmad</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      
+       <!-- no 3 -->
+     
+       <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/aashiqui.jpg" alt="aashiqui" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Hum Mar Jayenge</h3>
+        <h5 class="text-center">Tulsi Kumar</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      <!-- no 4 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/aedil.jpg" alt="channa mereya" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Channa Mereya</h3>
+        <h5 class="text-center">Arijit Singh</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 5-->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/kalank.jpg" alt="kalank" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">
+          Kalank Title track
+        </h3>
+        <h5 class="text-center">Pritam</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 6 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/mahi.jpg" alt="mr&mrs mahi" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Tu Hai Toh</h3>
+        <h5 class="text-center">Hunny,Bunny,Sagar</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      <!-- no 7 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/mismatched.jpg" alt="ishq hai" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Aise Kyun</h3>
+        <h5 class="text-center">Rekha Bharadwaj</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 8 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/yjhd.jpg" alt="yjhd" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Subhanallah</h3>
+        <h5 class="text-center">Sreerama Chandra</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 9 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/onceupon.jpg" alt="Tum Jo Aaye" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Tum Jo Aaye</h3>
+        <h5 class="text-center">Rahat Fateh Ali Khan</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 10 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/kabir.jpg" alt="Tujhe Kitna Chahne Lage" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Tujhe Kitna Chahne</h3>
+        <h5 class="text-center">Mithoon</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 11 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/wakeup.jpg" alt="Iktaara" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Iktaara</h3>
+        <h5 class="text-center">Amit Trivedi</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 12 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/Laila.jpg" alt="O Meri Laila" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">O Meri Laila</h3>
+        <h5 class="text-center">Atif Aslam</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 13 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/omshanti.jpg" alt="Ajab Si" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Ajab Si</h3>
+        <h5 class="text-center">KK</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 14-->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/myname.jpg" alt="Sajdaa" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Sajdaa</h3>
+        <h5 class="text-center">Shankar-Ehsaan-Loy</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no-1 -->
+
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Top Charts</h1>
+    <section class="flex flex-wrap gap-6">
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/weekend.jpg" alt="Weekend" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Top Artist</h3>
+        <h5 class="text-center">The Weekend</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+       <!-- no 2 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/india.jpg" alt="Trending" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Trending in India</h3>
+        <h5 class="text-center">Jio Saavn</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      
+       <!-- no 3 -->
+     
+       <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/blueyungkjai.jpg" alt="blueyungkjai" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Most Searched</h3>
+        <h5 class="text-center">Jio Saavn</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      <!-- no 4 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/chuttamalle.jpg" alt="chuttamalle" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">South Hits</h3>
+        <h5 class="text-center">Jio Saavn</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 5-->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/Eminem.jpg" alt="for u" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">For You</h3>
+        <h5 class="text-center">Jio Saavn</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- no 6 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/Shahrukh .jpg" alt="srk" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Hindi 1990's</h3>
+        <h5 class="text-center">Jio Saavn</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      <!-- no 7 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/nilave vaa.jpg" alt="nilave" class="w-[200px] h-[150px] rounded-lg cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Liked Songs</h3>
+        <h5 class="text-center">You</h5>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-lg opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+      <!-- no-1 -->
+
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Top Artists</h1>
+    <section class="flex flex-wrap gap-6">
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/em.jpg" alt="em" class="w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Eminem</h3>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+          </div>
+        </div>
+      </div>
+
+       <!-- no 2 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/honey.jpg" alt="honey" class= "w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Anirudh</h3>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+          </div>
+        </div>
+      </div>
+      
+       <!-- no 3 -->
+     
+       <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/arijit singh.jpg" alt="arijit" class="w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Arijit Singh</h3>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+          </div>
+        </div>
+      </div>
+      <!-- no 4 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/shreya.jpg" alt="shreya" class="w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Shreya Ghoshal</h3>
+       
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+          </div>
+        </div>
+      </div>
+
+      <!-- no 5-->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/lana.jpg" alt="lana" class="w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Lana Del Rey</h3>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+          </div>
+        </div>
+      </div>
+
+      <!-- no 6 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/shawn.jpg" alt="shawn" class="w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Shawn Mendes</h3>
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+            
+          </div>
+        </div>
+      </div>
+      <!-- no 7 -->
+     
+      <div class="w-[150px] h-[210px] relative">
+        <img src="../assets/conan.jpg" alt="conan" class="w-[200px] h-[150px] rounded-full cursor-pointer">
+        <h3 class="text-gray-800 text-center font-bold mt-2">Conan Gray</h3>
+
+
+        <div class="w-[150px] h-[150px] cursor-pointer hover:bg-black/50 absolute top-0 text-white rounded-full opacity-0 hover:opacity-100">
+          <i class="fa-solid fa-circle-play text-3xl absolute top-[35%] left-[35%] p-3 bg-black rounded-full scale-100 hover:scale-125 transition-all duration-100 ease-linear"></i>
+          <div class="w-full absolute flex justify-between items-end top-[80%] px-3 py-2">
+          </div>
+        </div>
+      </div>
+      </section>
+  </main>
+</div>
+<br> <br>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-gray-300 text-black w-full fixed bottom-0 px-4 py-3 flex items-center justify-between">
+  <div class="flex items-center space-x-3">
+    <div class="w-10 h-10 bg-gray-400 rounded-md"></div> 
+    <div>
+      <p class="text-[15px] font-semibold">Song Title</p>
+      <p class="text-[10px] text-gray-700">Artist Name</p>
+    </div>
+  </div>
+
+  <div class="flex items-center space-x-9 ml-40 text-[25px]">
+    <button><i class="fa-solid fa-repeat  text-gray-900  hover:text-gray-500"></i></button>
+    <button><i class="fas fa-step-backward  text-gray-900  hover:text-gray-500"></i></button>
+    <button> <i class="fas fa-play  text-gray-900 hover:text-gray-500"></i> </button>
+    <button><i class="fas fa-step-forward  text-gray-900 hover:text-gray-500"></i></button>
+    <button><i class="fa-solid fa-shuffle  text-gray-900 hover:text-gray-500"></i></button>
+  </div>
+
+  <div class="flex items-center space-x-8 text-[25px] text-gray-700">
+    <button><i class="fa-solid fa-ellipsis hover:text-gray-500"></i></button>
+    <button><i class="fas fa-volume-up hover:text-gray-500"></i></button>
+    <button><i class="fa-solid fa-up-right-and-down-left-from-center  hover:text-gray-500"></i></button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let audio = new Audio("../assets/kun.mp3");
+          let playButton = document.getElementById("playPauseBtn");
+  
+          function togglePlayPause() {
+              if (audio.paused) {
+                  audio.play();
+                  playButton.classList.replace("fa-circle-play", "fa-circle-pause");
+              } else {
+                  audio.pause();
+                  playButton.classList.replace("fa-circle-pause", "fa-circle-play");
+              }
+          }
+  
+          playButton.addEventListener("click", (event) => {
+              event.stopPropagation();
+              togglePlayPause();
+          });
+      });
+  </script>
+      
+  </div>
+</footer> 
+</body>
+</html>
